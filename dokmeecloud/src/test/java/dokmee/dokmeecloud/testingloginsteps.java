@@ -1,16 +1,12 @@
 package dokmee.dokmeecloud;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
-import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.thoughtworks.selenium.DefaultSelenium;
-import com.thoughtworks.selenium.Selenium;
-
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -40,7 +32,7 @@ public class testingloginsteps {
 
 	//@Before
 @Given("^User at login page$")
-@SuppressWarnings("deprecation")
+//@SuppressWarnings("deprecation")
 public void user_at_login_page() throws Throwable {
     driver = new FirefoxDriver();
     driver.get("http:www.dokmeecloud.com");
@@ -59,7 +51,7 @@ public void check_message(String message,String xpath){
 	assertEquals(message,text);
 	
 }
-
+/*
 @When("^I click on (.*) (.*)$")
 public void i_click_on_Log_In_button(String buttonname, String method)  {
 	//assertTrue(false);
@@ -101,7 +93,7 @@ public void i_click_on_Log_In_button(String buttonname, String method)  {
 		e.printStackTrace();
 	}
 }
-
+*/
 
 @When("^I click on (.*) cssSelector$")
 public void click_on_cssSelectoer(String css) throws Throwable {
